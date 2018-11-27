@@ -1,14 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <iostream>
-#include <time.h>
-#include <omp.h>
-#include <sys/time.h>
-#include <vector>
-#include <tuple>
-#include <algorithm>
 #include "papi.h"
+#include "measurements.h"   
 
 using namespace std;
 
@@ -24,7 +15,7 @@ vector<double> miss_rates_paralelo;
 double clearcache [30000000]; //cache
 timeval t; //tempos
 long long unsigned tempoInicial; //tempo inicial, variavel global
-unsigned num_threads; //numero de threads, tem de ser uma variavel conhecida pela main (incluir no .h)
+//unsigned nThreads; //numero de threads, tem de ser uma variavel conhecida pela main (incluir no .h)
 
 long long values[NUM_EVENTS]; // para depois calcular as miss rates == values[0](LOAD_MISSES) / values[1](TOT_INS)
 
@@ -61,6 +52,9 @@ long long unsigned stopCounters(int nThread){
 		miss_rates_paralelo.push_back((double)((double)values[0]/(double)(values[1])));
     }
 
+    //cout << "Tempo = " << tempoFinal - tempoInicial << endl;
+    //cout << "Miss = " << (double)((double)values[0]/(double)(values[1])) << endl;
+
 	return tempoFinal - tempoInicial;
 }
 
@@ -92,20 +86,26 @@ std::pair<long long unsigned, double> mediana(int thread) {
         melhorM = *median_itM;
 
 	}
+
 	return std::make_pair(melhorT, melhorM);
 }
 
-void printResults (int num_threads) {
+void printResults (int nThreads, int sizeInput) {
     auto sequencial = mediana(-1);
-    //auto paralelo = mediana(num_threads);
+    //auto paralelo = mediana(nThreads);
+    int nBuckets = (int)sqrt(sizeInput)+1; // numero de Buckets
 	
+    cout << "\n----- Nº elementos = " << sizeInput << ", Nº buckets = " << nBuckets << " -----" << endl;
+
     cout << "Versão sequencial:\n" 
 		 << "\tTempo: " << std::get<0>(sequencial) << " usecs,\n"
          << "\tMiss rate (L1): " << std::get<1>(sequencial) << endl;
 	/*
-    cout << "Versão sequencial (Nº threads = "<< num_threads << "):\n" 
+    cout << "Versão sequencial (Nº threads = "<< nThreads << "):\n" 
 		 << "\tTempo: " << std::get<0>(paralelo) << " usecs,\n"
          << "\tMiss rate (L1): " << std::get<1>(paralelo) << endl;
 
     cout << "Speed-up: " << (double)((double)(std::get<0>(sequencial))/(double)(std::get<0>(paralelo))) << endl;*/
+
+    cout << "--------------------------------------------------\n" << endl;
 }

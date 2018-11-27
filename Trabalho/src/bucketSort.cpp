@@ -9,10 +9,10 @@ void geraInputs(int numerosInput[], int sizeInput){
 	}
 }
 
-void criarBuckets(int buckets[],int contadores[], int sizeBuckets, int nBuckets){
-	for (int i = 0; i < sizeBuckets; i++){ //nao sei se é preciso inicializar este array
+void criarBuckets(int contadores[], int nBuckets){
+	/*for (int i = 0; i < sizeBuckets; i++){ //nao sei se é preciso inicializar este array
 		buckets[i]=0;
-	}
+	}*/
 
 	for (int i = 0; i < nBuckets; i++){
 		contadores[i] = 0;
@@ -32,7 +32,8 @@ void insereBuckets(int buckets[], int contadores[], int numerosInput[],int sizeI
 void ordenaBuckets(int buckets[], int contadores[], int sizeInput, int nBuckets){
 	for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
-                mergeSort(buckets,i*sizeInput,i*sizeInput+contadores[i]-1);
+                //mergeSort(buckets,i*sizeInput,i*sizeInput+contadores[i]-1);
+				mergesort(&buckets[i*sizeInput],contadores[i]);
             }
 		}	
 }
@@ -55,4 +56,20 @@ void printArray(int array[], int sizeArray){
 	}
 	printf("]\n");
 
+}
+
+void bucketSortSeq(int numerosInput[], int sizeInput){
+
+	int nBuckets = (int)sqrt(sizeInput)+1; // numero de Buckets
+    int sizeBuckets = sizeInput*nBuckets; //tamanho do array de buckets
+	int contadores[nBuckets]; //conta quantos elementos estão num dado bucket, atualmente.
+    int buckets[sizeBuckets];
+
+	criarBuckets(contadores,nBuckets);
+
+    insereBuckets(buckets,contadores,numerosInput,sizeInput);
+        
+    ordenaBuckets(buckets,contadores,sizeInput,nBuckets);
+
+    ordenaInput(buckets,contadores,numerosInput,sizeInput, nBuckets);
 }
