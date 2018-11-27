@@ -2,7 +2,7 @@ BIN_NAME = main
 
 CXX = g++
 
-CXXFLAGS = -O3 -Wall -Wextra -fopenmp -std=c++11 -Wno-unused-parameter -L/share/apps/papi/5.5.0/lib -I/share/apps/papi/5.5.0/include -lpapi -fopt-info-missed=results/vec_report.dat
+CXXFLAGS = -O3 -Wall -Wextra -fopenmp -std=c++11 -Wno-unused-parameter -L/share/apps/papi/5.5.0/lib -I/share/apps/papi/5.5.0/include -lpapi -fopt-info-missed=results/vectorization.txt
 #CXXFLAGS    = -O3 -Wall -Wextra -qopenmp -std=c++11 -Wno-unused-parameter -qopt-report=3
 
 SRC_DIR = src
