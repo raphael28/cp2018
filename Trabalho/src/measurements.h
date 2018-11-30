@@ -13,5 +13,5 @@
 void clearCache();
 void startCounters();
 long long unsigned stopCounters(int nThread);
-std::pair<long long unsigned, double> mediana(int thread);
+std::tuple<long long unsigned, double,double,double> mediana(int thread);
 void printResults (int nThreads, int sizeInput);

@@ -1,13 +1,15 @@
-#include "papi.h"
+//#include "papi.h"
 #include "measurements.h"   
 
 using namespace std;
 
-#define NUM_EVENTS 2
+#define NUM_EVENTS 4
 #define MAX_THREADS 64
 
 vector<long long unsigned> tempos_sequencial; //vetores para guardar as medições
-vector<double> miss_rates_sequencial;
+vector<double> miss_rates_L1_sequencial;
+vector<double> miss_rates_L2_sequencial;
+vector<double> miss_rates_L3_sequencial;
 
 vector<long long unsigned> tempos_paralelo;
 vector<double> miss_rates_paralelo;
@@ -21,6 +23,8 @@ long long values[NUM_EVENTS]; // para depois calcular as miss rates == values[0]
 
 int events[] = { //tipo de eventos que estou a guardar
 	PAPI_L1_LDM, //Level 1 load misses
+    PAPI_L2_LDM, //Level 2 load misses
+    PAPI_L3_LDM, //Level 3 load misses
     PAPI_TOT_INS  //Total instructions executed
 };
 
@@ -45,22 +49,25 @@ long long unsigned stopCounters(int nThread){
 
 	if (nThread == -1){
 		tempos_sequencial.push_back(tempoFinal - tempoInicial);
-        miss_rates_sequencial.push_back((double)((double)values[0]/(double)(values[1])));
+        miss_rates_L1_sequencial.push_back((double)((double)values[0]/(double)(values[3])));
+        miss_rates_L2_sequencial.push_back((double)((double)values[1]/(double)(values[3])));
+        miss_rates_L3_sequencial.push_back((double)((double)values[2]/(double)(values[3])));
     }
 	else {
 		tempos_paralelo.push_back(tempoFinal - tempoInicial);
-		miss_rates_paralelo.push_back((double)((double)values[0]/(double)(values[1])));
+		miss_rates_paralelo.push_back((double)((double)values[0]/(double)(values[3])));
     }
-
-    //cout << "Tempo = " << tempoFinal - tempoInicial << endl;
-    //cout << "Miss = " << (double)((double)values[0]/(double)(values[1])) << endl;
+	cout << "(Values[0] = " << values[0]
+	     << ", Values[1] = " << values[1]
+	     << ", Values[2] = " << values[2]
+	     << ", Values[3] = " << values[3] << ")\n" << endl;
 
 	return tempoFinal - tempoInicial;
 }
 
-std::pair<long long unsigned, double> mediana(int thread) {
+std::tuple<long long unsigned, double, double, double> mediana(int thread) {
 	long long unsigned melhorT = 0;
-    double melhorM = 0.0;
+    double melhorM_L1 = 0.0,melhorM_L2 = 0.0,melhorM_L3 = 0.0;
 
 	if (thread == - 1) {
         std::sort(tempos_sequencial.begin(), tempos_sequencial.end());
@@ -68,13 +75,22 @@ std::pair<long long unsigned, double> mediana(int thread) {
         std::nth_element(tempos_sequencial.begin(), median_itT , tempos_sequencial.end());
         melhorT = *median_itT;
 
-        std::sort(miss_rates_sequencial.begin(), miss_rates_sequencial.end());
-        const auto median_itM = miss_rates_sequencial.begin() + miss_rates_sequencial.size() / 2;
-        std::nth_element(miss_rates_sequencial.begin(), median_itM , miss_rates_sequencial.end());
-        melhorM = *median_itM;
+        std::sort(miss_rates_L1_sequencial.begin(), miss_rates_L1_sequencial.end());
+        const auto median_itM_L1 = miss_rates_L1_sequencial.begin() + miss_rates_L1_sequencial.size() / 2;
+        std::nth_element(miss_rates_L1_sequencial.begin(), median_itM_L1 , miss_rates_L1_sequencial.end());
+        melhorM_L1 = *median_itM_L1;
+
+        std::sort(miss_rates_L2_sequencial.begin(), miss_rates_L2_sequencial.end());
+        const auto median_itM_L2 = miss_rates_L2_sequencial.begin() + miss_rates_L2_sequencial.size() / 2;
+        std::nth_element(miss_rates_L2_sequencial.begin(), median_itM_L2 , miss_rates_L2_sequencial.end());
+        melhorM_L2 = *median_itM_L2;
         
+        std::sort(miss_rates_L3_sequencial.begin(), miss_rates_L3_sequencial.end());
+        const auto median_itM_L3 = miss_rates_L3_sequencial.begin() + miss_rates_L3_sequencial.size() / 2;
+        std::nth_element(miss_rates_L3_sequencial.begin(), median_itM_L3 , miss_rates_L3_sequencial.end());
+        melhorM_L3 = *median_itM_L3;
 	} 
-	else {
+	else { //paralelo
         std::sort(tempos_paralelo.begin(), tempos_paralelo.end());
         const auto median_itT = tempos_paralelo.begin() + tempos_paralelo.size() / 2;
         std::nth_element(tempos_paralelo.begin(), median_itT , tempos_paralelo.end());
@@ -83,11 +99,11 @@ std::pair<long long unsigned, double> mediana(int thread) {
         std::sort(miss_rates_paralelo.begin(), miss_rates_paralelo.end());
         const auto median_itM = miss_rates_paralelo.begin() + miss_rates_paralelo.size() / 2;
         std::nth_element(miss_rates_paralelo.begin(), median_itM , miss_rates_paralelo.end());
-        melhorM = *median_itM;
+        melhorM_L1 = *median_itM;
 
 	}
 
-	return std::make_pair(melhorT, melhorM);
+	return std::make_tuple(melhorT,melhorM_L1,melhorM_L2,melhorM_L3);
 }
 
 void printResults (int nThreads, int sizeInput) {
@@ -98,8 +114,10 @@ void printResults (int nThreads, int sizeInput) {
     cout << "\n----- Nº elementos = " << sizeInput << ", Nº buckets = " << nBuckets << " -----" << endl;
 
     cout << "Versão sequencial:\n" 
-		 << "\tTempo: " << std::get<0>(sequencial) << " usecs,\n"
-         << "\tMiss rate (L1): " << std::get<1>(sequencial) << endl;
+         << "\tTempo: " << std::get<0>(sequencial) << " usecs,\n"
+         << "\tMiss rate (L1): " << std::get<1>(sequencial) << "\n"
+         << "\tMiss rate (L2): " << std::get<2>(sequencial) << "\n"
+         << "\tMiss rate (L3): " << std::get<3>(sequencial) << endl;
 	/*
     cout << "Versão sequencial (Nº threads = "<< nThreads << "):\n" 
 		 << "\tTempo: " << std::get<0>(paralelo) << " usecs,\n"

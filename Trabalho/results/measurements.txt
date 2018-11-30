@@ -1,51 +1,1020 @@
 
-TAMANHO ARRAY INPUT = 1000
+A preencher array com 5000 elementos ...
 
-TAMANHO BUCKETS = 32000
+(Values[0] = 1569, Values[1] = 483, Values[2] = 10, Values[3] = 1022085)
 
-Nº BUCKETS = 32
 
-GEREI INPUTS!
+A preencher array com 5000 elementos ...
 
-CRIEI BUCKETS!
+(Values[0] = 1072, Values[1] = 237, Values[2] = 10, Values[3] = 1016680)
 
-INSERI NOS BUCKETS!
 
-ORDENEI OS ELEMENTOS EM CADA BUCKET!
+A preencher array com 5000 elementos ...
 
-ORDENEI O ARRAY DE INPUT!
+(Values[0] = 987, Values[1] = 238, Values[2] = 8, Values[3] = 1012264)
 
-CRIEI BUCKETS!
 
-INSERI NOS BUCKETS!
+A preencher array com 5000 elementos ...
 
-ORDENEI OS ELEMENTOS EM CADA BUCKET!
+(Values[0] = 1092, Values[1] = 242, Values[2] = 10, Values[3] = 1012365)
 
-ORDENEI O ARRAY DE INPUT!
 
-CRIEI BUCKETS!
+A preencher array com 5000 elementos ...
 
-INSERI NOS BUCKETS!
+(Values[0] = 1068, Values[1] = 236, Values[2] = 11, Values[3] = 1012383)
 
-ORDENEI OS ELEMENTOS EM CADA BUCKET!
 
-ORDENEI O ARRAY DE INPUT!
-
-CRIEI BUCKETS!
-
-INSERI NOS BUCKETS!
-
-ORDENEI OS ELEMENTOS EM CADA BUCKET!
-
-ORDENEI O ARRAY DE INPUT!
-
-CRIEI BUCKETS!
-
-INSERI NOS BUCKETS!
-
-ORDENEI OS ELEMENTOS EM CADA BUCKET!
-
-ORDENEI O ARRAY DE INPUT!
+----- Nº elementos = 5000, Nº buckets = 71 -----
 Versão sequencial:
-	Tempo: 51178 usecs,
-	Miss rate (L1): 0.000238274
+	Tempo: 462 usecs,
+	Miss rate (L1): 0.00105494
+	Miss rate (L2): 0.000235117
+	Miss rate (L3): 9.83594e-06
+--------------------------------------------------
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2420, Values[1] = 613, Values[2] = 13, Values[3] = 1688821)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2049, Values[1] = 363, Values[2] = 14, Values[3] = 1683455)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1955, Values[1] = 330, Values[2] = 15, Values[3] = 1683460)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1990, Values[1] = 340, Values[2] = 12, Values[3] = 1683406)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1997, Values[1] = 338, Values[2] = 15, Values[3] = 1683369)
+
+
+----- Nº elementos = 8000, Nº buckets = 90 -----
+Versão sequencial:
+	Tempo: 648 usecs,
+	Miss rate (L1): 0.00118631
+	Miss rate (L2): 0.000201971
+	Miss rate (L3): 8.31623e-06
+--------------------------------------------------
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6708, Values[1] = 2206, Values[2] = 206, Values[3] = 6625180)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6248, Values[1] = 1571, Values[2] = 44, Values[3] = 6619720)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6252, Values[1] = 1594, Values[2] = 41, Values[3] = 6619719)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6218, Values[1] = 1425, Values[2] = 43, Values[3] = 6619719)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6265, Values[1] = 1827, Values[2] = 44, Values[3] = 6619720)
+
+
+----- Nº elementos = 30000, Nº buckets = 174 -----
+Versão sequencial:
+	Tempo: 2112 usecs,
+	Miss rate (L1): 0.000944451
+	Miss rate (L2): 0.000240796
+	Miss rate (L3): 6.64681e-06
+--------------------------------------------------
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 11093, Values[1] = 6069, Values[2] = 235, Values[3] = 11183277)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10465, Values[1] = 5088, Values[2] = 59, Values[3] = 11177805)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10449, Values[1] = 5038, Values[2] = 60, Values[3] = 11177805)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10460, Values[1] = 5158, Values[2] = 62, Values[3] = 11177805)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10471, Values[1] = 5328, Values[2] = 61, Values[3] = 11177806)
+
+
+----- Nº elementos = 50000, Nº buckets = 224 -----
+Versão sequencial:
+	Tempo: 3442 usecs,
+	Miss rate (L1): 0.00093623
+	Miss rate (L2): 0.00046145
+	Miss rate (L3): 5.45724e-06
+--------------------------------------------------
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 21437, Values[1] = 11768, Values[2] = 312, Values[3] = 23069486)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20183, Values[1] = 10904, Values[2] = 107, Values[3] = 23063986)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20192, Values[1] = 10613, Values[2] = 108, Values[3] = 23063986)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20196, Values[1] = 10778, Values[2] = 109, Values[3] = 23063987)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20188, Values[1] = 10905, Values[2] = 108, Values[3] = 23063986)
+
+
+----- Nº elementos = 100000, Nº buckets = 317 -----
+Versão sequencial:
+	Tempo: 7041 usecs,
+	Miss rate (L1): 0.000875477
+	Miss rate (L2): 0.000472772
+	Miss rate (L3): 4.68263e-06
+--------------------------------------------------
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 131874, Values[1] = 52575, Values[2] = 1840, Values[3] = 129643621)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 114940, Values[1] = 48881, Values[2] = 505, Values[3] = 129636575)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 114505, Values[1] = 48114, Values[2] = 504, Values[3] = 129636574)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 114635, Values[1] = 48244, Values[2] = 499, Values[3] = 129636574)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 114916, Values[1] = 48468, Values[2] = 504, Values[3] = 129636575)
+
+
+----- Nº elementos = 500000, Nº buckets = 708 -----
+Versão sequencial:
+	Tempo: 38356 usecs,
+	Miss rate (L1): 0.000886447
+	Miss rate (L2): 0.000373876
+	Miss rate (L3): 3.88779e-06
+--------------------------------------------------
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1590, Values[1] = 471, Values[2] = 10, Values[3] = 1024500)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1148, Values[1] = 231, Values[2] = 12, Values[3] = 1020745)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 983, Values[1] = 218, Values[2] = 11, Values[3] = 1020651)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1064, Values[1] = 224, Values[2] = 9, Values[3] = 1020693)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1119, Values[1] = 229, Values[2] = 11, Values[3] = 1020841)
+
+
+----- Nº elementos = 5000, Nº buckets = 71 -----
+Versão sequencial:
+	Tempo: 436 usecs,
+	Miss rate (L1): 0.00109616
+	Miss rate (L2): 0.000224325
+	Miss rate (L3): 1.07754e-05
+--------------------------------------------------
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2343, Values[1] = 598, Values[2] = 12, Values[3] = 1685142)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2001, Values[1] = 353, Values[2] = 13, Values[3] = 1679781)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1949, Values[1] = 335, Values[2] = 13, Values[3] = 1679594)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1960, Values[1] = 386, Values[2] = 14, Values[3] = 1679696)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2054, Values[1] = 394, Values[2] = 15, Values[3] = 1679817)
+
+
+----- Nº elementos = 8000, Nº buckets = 90 -----
+Versão sequencial:
+	Tempo: 634 usecs,
+	Miss rate (L1): 0.00119123
+	Miss rate (L2): 0.000229803
+	Miss rate (L3): 7.73997e-06
+--------------------------------------------------
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6949, Values[1] = 2509, Values[2] = 192, Values[3] = 6623171)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6460, Values[1] = 1944, Values[2] = 43, Values[3] = 6617693)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6411, Values[1] = 1631, Values[2] = 42, Values[3] = 6617692)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6417, Values[1] = 2122, Values[2] = 42, Values[3] = 6617692)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6436, Values[1] = 1953, Values[2] = 41, Values[3] = 6617693)
+
+
+----- Nº elementos = 30000, Nº buckets = 174 -----
+Versão sequencial:
+	Tempo: 2096 usecs,
+	Miss rate (L1): 0.000972544
+	Miss rate (L2): 0.000295118
+	Miss rate (L3): 6.34662e-06
+--------------------------------------------------
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 11132, Values[1] = 6017, Values[2] = 245, Values[3] = 11181331)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10579, Values[1] = 5342, Values[2] = 61, Values[3] = 11175874)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10585, Values[1] = 5247, Values[2] = 59, Values[3] = 11175874)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10544, Values[1] = 5174, Values[2] = 58, Values[3] = 11175874)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10617, Values[1] = 5531, Values[2] = 60, Values[3] = 11175874)
+
+
+----- Nº elementos = 50000, Nº buckets = 224 -----
+Versão sequencial:
+	Tempo: 3454 usecs,
+	Miss rate (L1): 0.00094713
+	Miss rate (L2): 0.000477994
+	Miss rate (L3): 5.36871e-06
+--------------------------------------------------
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 21699, Values[1] = 11510, Values[2] = 338, Values[3] = 23029997)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20434, Values[1] = 10795, Values[2] = 111, Values[3] = 23024496)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20398, Values[1] = 10603, Values[2] = 111, Values[3] = 23024496)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20487, Values[1] = 10951, Values[2] = 113, Values[3] = 23024497)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20452, Values[1] = 10863, Values[2] = 115, Values[3] = 23024496)
+
+
+----- Nº elementos = 100000, Nº buckets = 317 -----
+Versão sequencial:
+	Tempo: 7026 usecs,
+	Miss rate (L1): 0.000888271
+	Miss rate (L2): 0.000471802
+	Miss rate (L3): 4.90782e-06
+--------------------------------------------------
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 130651, Values[1] = 52562, Values[2] = 1792, Values[3] = 129668262)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 112652, Values[1] = 47836, Values[2] = 508, Values[3] = 129647000)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 112455, Values[1] = 47761, Values[2] = 503, Values[3] = 129646998)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 112413, Values[1] = 47553, Values[2] = 500, Values[3] = 129646998)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 112445, Values[1] = 47883, Values[2] = 514, Values[3] = 129646999)
+
+
+----- Nº elementos = 500000, Nº buckets = 708 -----
+Versão sequencial:
+	Tempo: 38289 usecs,
+	Miss rate (L1): 0.000867394
+	Miss rate (L2): 0.000368971
+	Miss rate (L3): 3.91833e-06
+--------------------------------------------------
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1580, Values[1] = 467, Values[2] = 10, Values[3] = 1028201)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1055, Values[1] = 206, Values[2] = 8, Values[3] = 1022943)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1071, Values[1] = 223, Values[2] = 10, Values[3] = 1018921)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1102, Values[1] = 236, Values[2] = 10, Values[3] = 1018949)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1068, Values[1] = 207, Values[2] = 9, Values[3] = 1019098)
+
+
+----- Nº elementos = 5000, Nº buckets = 71 -----
+Versão sequencial:
+	Tempo: 439 usecs,
+	Miss rate (L1): 0.00105111
+	Miss rate (L2): 0.000218859
+	Miss rate (L3): 9.72572e-06
+--------------------------------------------------
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2374, Values[1] = 580, Values[2] = 12, Values[3] = 1688966)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2068, Values[1] = 348, Values[2] = 14, Values[3] = 1683453)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1971, Values[1] = 324, Values[2] = 10, Values[3] = 1683499)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2043, Values[1] = 342, Values[2] = 11, Values[3] = 1683596)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2041, Values[1] = 344, Values[2] = 12, Values[3] = 1683594)
+
+
+----- Nº elementos = 8000, Nº buckets = 90 -----
+Versão sequencial:
+	Tempo: 635 usecs,
+	Miss rate (L1): 0.00121347
+	Miss rate (L2): 0.000204325
+	Miss rate (L3): 7.10494e-06
+--------------------------------------------------
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 7018, Values[1] = 2211, Values[2] = 205, Values[3] = 6622849)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6545, Values[1] = 2240, Values[2] = 45, Values[3] = 6617392)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6498, Values[1] = 2155, Values[2] = 42, Values[3] = 6617391)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6554, Values[1] = 1985, Values[2] = 42, Values[3] = 6617391)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6555, Values[1] = 2011, Values[2] = 41, Values[3] = 6617392)
+
+
+----- Nº elementos = 30000, Nº buckets = 174 -----
+Versão sequencial:
+	Tempo: 2108 usecs,
+	Miss rate (L1): 0.000990421
+	Miss rate (L2): 0.000325657
+	Miss rate (L3): 6.34691e-06
+--------------------------------------------------
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10972, Values[1] = 5375, Values[2] = 238, Values[3] = 11173042)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10409, Values[1] = 5356, Values[2] = 61, Values[3] = 11167575)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10353, Values[1] = 5267, Values[2] = 62, Values[3] = 11167573)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10397, Values[1] = 5127, Values[2] = 62, Values[3] = 11167573)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10360, Values[1] = 5233, Values[2] = 65, Values[3] = 11167574)
+
+
+----- Nº elementos = 50000, Nº buckets = 224 -----
+Versão sequencial:
+	Tempo: 3454 usecs,
+	Miss rate (L1): 0.000930999
+	Miss rate (L2): 0.000471633
+	Miss rate (L3): 5.55179e-06
+--------------------------------------------------
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 21486, Values[1] = 11551, Values[2] = 317, Values[3] = 23012141)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20163, Values[1] = 10739, Values[2] = 110, Values[3] = 23006645)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20148, Values[1] = 10742, Values[2] = 109, Values[3] = 23006645)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20116, Values[1] = 10746, Values[2] = 112, Values[3] = 23006646)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20115, Values[1] = 10545, Values[2] = 111, Values[3] = 23006645)
+
+
+----- Nº elementos = 100000, Nº buckets = 317 -----
+Versão sequencial:
+	Tempo: 7018 usecs,
+	Miss rate (L1): 0.000875747
+	Miss rate (L2): 0.000466909
+	Miss rate (L3): 4.82469e-06
+--------------------------------------------------
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 131832, Values[1] = 54510, Values[2] = 1914, Values[3] = 129607336)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 113608, Values[1] = 47946, Values[2] = 510, Values[3] = 129658424)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 113617, Values[1] = 48524, Values[2] = 510, Values[3] = 129658424)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 113363, Values[1] = 48085, Values[2] = 508, Values[3] = 129658423)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 113385, Values[1] = 48774, Values[2] = 511, Values[3] = 129658424)
+
+
+----- Nº elementos = 500000, Nº buckets = 708 -----
+Versão sequencial:
+	Tempo: 38308 usecs,
+	Miss rate (L1): 0.00087621
+	Miss rate (L2): 0.000374245
+	Miss rate (L3): 3.93341e-06
+--------------------------------------------------
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1501, Values[1] = 426, Values[2] = 10, Values[3] = 1075751)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1157, Values[1] = 223, Values[2] = 12, Values[3] = 1070347)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1043, Values[1] = 244, Values[2] = 11, Values[3] = 1070307)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1201, Values[1] = 249, Values[2] = 12, Values[3] = 1065584)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1172, Values[1] = 226, Values[2] = 9, Values[3] = 1065321)
+
+
+----- Nº elementos = 5000, Nº buckets = 71 -----
+Versão sequencial:
+	Tempo: 473 usecs,
+	Miss rate (L1): 0.00110014
+	Miss rate (L2): 0.000227972
+	Miss rate (L3): 1.02774e-05
+--------------------------------------------------
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2345, Values[1] = 614, Values[2] = 12, Values[3] = 1748766)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2043, Values[1] = 383, Values[2] = 13, Values[3] = 1743294)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1915, Values[1] = 361, Values[2] = 15, Values[3] = 1743527)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1908, Values[1] = 352, Values[2] = 16, Values[3] = 1743309)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1958, Values[1] = 366, Values[2] = 16, Values[3] = 1743848)
+
+
+----- Nº elementos = 8000, Nº buckets = 90 -----
+Versão sequencial:
+	Tempo: 675 usecs,
+	Miss rate (L1): 0.0011228
+	Miss rate (L2): 0.000209881
+	Miss rate (L3): 8.60325e-06
+--------------------------------------------------
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6830, Values[1] = 2167, Values[2] = 188, Values[3] = 6997517)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6410, Values[1] = 1938, Values[2] = 42, Values[3] = 6992057)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6315, Values[1] = 1520, Values[2] = 38, Values[3] = 6992056)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6389, Values[1] = 1940, Values[2] = 40, Values[3] = 6992056)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6346, Values[1] = 1484, Values[2] = 41, Values[3] = 6992057)
+
+
+----- Nº elementos = 30000, Nº buckets = 174 -----
+Versão sequencial:
+	Tempo: 2245 usecs,
+	Miss rate (L1): 0.000913751
+	Miss rate (L2): 0.000277172
+	Miss rate (L3): 5.8638e-06
+--------------------------------------------------
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 11007, Values[1] = 5831, Values[2] = 251, Values[3] = 11953350)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10355, Values[1] = 5189, Values[2] = 62, Values[3] = 11947882)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10325, Values[1] = 5007, Values[2] = 59, Values[3] = 11947883)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10349, Values[1] = 5001, Values[2] = 59, Values[3] = 11947883)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10373, Values[1] = 5382, Values[2] = 60, Values[3] = 11947884)
+
+
+----- Nº elementos = 50000, Nº buckets = 224 -----
+Versão sequencial:
+	Tempo: 3736 usecs,
+	Miss rate (L1): 0.000866681
+	Miss rate (L2): 0.000434303
+	Miss rate (L3): 5.02181e-06
+--------------------------------------------------
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 22054, Values[1] = 11734, Values[2] = 380, Values[3] = 24602086)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20633, Values[1] = 10952, Values[2] = 112, Values[3] = 24596590)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20600, Values[1] = 10975, Values[2] = 110, Values[3] = 24596590)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20675, Values[1] = 11170, Values[2] = 113, Values[3] = 24596590)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 20651, Values[1] = 11039, Values[2] = 110, Values[3] = 24596590)
+
+
+----- Nº elementos = 100000, Nº buckets = 317 -----
+Versão sequencial:
+	Tempo: 7552 usecs,
+	Miss rate (L1): 0.000839588
+	Miss rate (L2): 0.000448802
+	Miss rate (L3): 4.55348e-06
+--------------------------------------------------
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 133007, Values[1] = 53333, Values[2] = 2099, Values[3] = 132389865)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 115602, Values[1] = 48780, Values[2] = 506, Values[3] = 132383758)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 115670, Values[1] = 49030, Values[2] = 506, Values[3] = 132383757)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 116337, Values[1] = 49444, Values[2] = 525, Values[3] = 132383757)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 115672, Values[1] = 48522, Values[2] = 508, Values[3] = 132383759)
+
+
+----- Nº elementos = 500000, Nº buckets = 708 -----
+Versão sequencial:
+	Tempo: 40123 usecs,
+	Miss rate (L1): 0.000873763
+	Miss rate (L2): 0.000370363
+	Miss rate (L3): 3.83733e-06
+--------------------------------------------------
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1672, Values[1] = 422, Values[2] = 11, Values[3] = 1050590)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1037, Values[1] = 210, Values[2] = 9, Values[3] = 1042546)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1126, Values[1] = 194, Values[2] = 15, Values[3] = 1039339)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1151, Values[1] = 218, Values[2] = 14, Values[3] = 1039452)
+
+
+A preencher array com 5000 elementos ...
+
+(Values[0] = 1081, Values[1] = 227, Values[2] = 11, Values[3] = 1039640)
+
+
+----- Nº elementos = 5000, Nº buckets = 71 -----
+Versão sequencial:
+	Tempo: 460 usecs,
+	Miss rate (L1): 0.00108338
+	Miss rate (L2): 0.000209726
+	Miss rate (L3): 1.05806e-05
+--------------------------------------------------
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2543, Values[1] = 615, Values[2] = 15, Values[3] = 1726931)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1997, Values[1] = 331, Values[2] = 16, Values[3] = 1718856)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 2024, Values[1] = 332, Values[2] = 16, Values[3] = 1718771)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1965, Values[1] = 320, Values[2] = 11, Values[3] = 1718851)
+
+
+A preencher array com 8000 elementos ...
+
+(Values[0] = 1985, Values[1] = 321, Values[2] = 13, Values[3] = 1718815)
+
+
+----- Nº elementos = 8000, Nº buckets = 90 -----
+Versão sequencial:
+	Tempo: 658 usecs,
+	Miss rate (L1): 0.00116182
+	Miss rate (L2): 0.00019257
+	Miss rate (L3): 8.68593e-06
+--------------------------------------------------
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6835, Values[1] = 2433, Values[2] = 211, Values[3] = 6762645)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6169, Values[1] = 1552, Values[2] = 47, Values[3] = 6754477)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6194, Values[1] = 1316, Values[2] = 44, Values[3] = 6754476)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6202, Values[1] = 1138, Values[2] = 46, Values[3] = 6754476)
+
+
+A preencher array com 30000 elementos ...
+
+(Values[0] = 6195, Values[1] = 1389, Values[2] = 46, Values[3] = 6754476)
+
+
+----- Nº elementos = 30000, Nº buckets = 174 -----
+Versão sequencial:
+	Tempo: 2141 usecs,
+	Miss rate (L1): 0.00091717
+	Miss rate (L2): 0.000205641
+	Miss rate (L3): 6.8103e-06
+--------------------------------------------------
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10845, Values[1] = 5429, Values[2] = 263, Values[3] = 11435015)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10070, Values[1] = 5062, Values[2] = 65, Values[3] = 11426841)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10083, Values[1] = 4807, Values[2] = 66, Values[3] = 11426841)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10124, Values[1] = 4871, Values[2] = 64, Values[3] = 11426841)
+
+
+A preencher array com 50000 elementos ...
+
+(Values[0] = 10065, Values[1] = 5026, Values[2] = 65, Values[3] = 11426842)
+
+
+----- Nº elementos = 50000, Nº buckets = 224 -----
+Versão sequencial:
+	Tempo: 3562 usecs,
+	Miss rate (L1): 0.000882396
+	Miss rate (L2): 0.000439842
+	Miss rate (L3): 5.68836e-06
+--------------------------------------------------
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 21338, Values[1] = 11258, Values[2] = 345, Values[3] = 23534622)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 19918, Values[1] = 10210, Values[2] = 112, Values[3] = 23526417)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 19831, Values[1] = 10056, Values[2] = 116, Values[3] = 23526416)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 19896, Values[1] = 10234, Values[2] = 116, Values[3] = 23526416)
+
+
+A preencher array com 100000 elementos ...
+
+(Values[0] = 19894, Values[1] = 10135, Values[2] = 117, Values[3] = 23526417)
+
+
+----- Nº elementos = 100000, Nº buckets = 317 -----
+Versão sequencial:
+	Tempo: 7235 usecs,
+	Miss rate (L1): 0.000845688
+	Miss rate (L2): 0.00043398
+	Miss rate (L3): 4.93063e-06
+--------------------------------------------------
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 129497, Values[1] = 50836, Values[2] = 1812, Values[3] = 132047525)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 111584, Values[1] = 44070, Values[2] = 506, Values[3] = 132048686)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 111691, Values[1] = 44032, Values[2] = 506, Values[3] = 132048684)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 111704, Values[1] = 44491, Values[2] = 506, Values[3] = 132048684)
+
+
+A preencher array com 500000 elementos ...
+
+(Values[0] = 111342, Values[1] = 44316, Values[2] = 509, Values[3] = 132048685)
+
+
+----- Nº elementos = 500000, Nº buckets = 708 -----
+Versão sequencial:
+	Tempo: 39320 usecs,
+	Miss rate (L1): 0.000845832
+	Miss rate (L2): 0.000335603
+	Miss rate (L3): 3.83192e-06
+--------------------------------------------------
+
