@@ -2,13 +2,15 @@
 
 #PBS -l nodes=1:ppn=1:r431
 #PBS -l walltime=10:00
-#PBS -N a79821job
+#PBS -N a78848job
 
-cd /home/a79821/Trabalho/
+cd /home/a78848/Trabalho/
 
 lscpu > specs.txt
 
-rm -f a79821job*
+rm -f a78848job*
+
+make clean > results/erros.txt
 
 echo "Loading modules..."
 
@@ -21,11 +23,11 @@ echo "Modules Loaded"
 
 echo "Compiling source code..."
 
-make > erros.txt
+make > results/erros.txt
 
 echo "Compilation Successful..."
 
-for size in 5000 8000 30000 50000 100000 500000
+for size in 5000 8000 50000 100000 500000 1000000 1500000
 do
 	./bin/main $size 1 5 >> results/measurements.txt
 done

@@ -1,9 +1,39 @@
 #include "bucketSort.h"
+#include "bucketSortPrl.h"
 #include "measurements.h"
 
 using namespace std;
 
 int sizeInput, nBuckets, sizeBuckets , nThreads, nRepeticoes;
+double clearcache [30000000]; //cache
+void clearCache() {
+	for (unsigned i = 0; i < 30000000; ++i)
+		clearcache[i] = i;
+}
+
+void printArray(int array[], int sizeArray){
+	printf("[");
+	for (int i = 0; i < sizeArray; i++){
+		printf("%d, ", array[i]);
+	}
+	printf("]\n");
+
+}
+
+int testaOrdenado(int array[], int sizeArray){
+    
+    for(int i = 0; i < sizeArray-1; i++)
+    {
+        if(array[i+1]<array[i]) {
+            printf("ARRAY NAO ORDENADO!");
+            return 1;
+        }
+    }
+
+    printf("ARRAY ORDENADO!");
+    
+    return 0;
+}
 
 int main(int argc, char **argv) {
 
@@ -17,29 +47,46 @@ int main(int argc, char **argv) {
     nRepeticoes = atoi(argv[3]);
 
     int numerosInputSeq[sizeInput]; //array input, com numeros random, dados por um intervalo [0,sizeMax]
-	//int numerosInputPrl[sizeInput];
+	int numerosInputPrl[sizeInput];
+
+    //long long unsigned tf=0;
 	
+    cout << "\n-----------------------------------------------" << endl;
+
     for( int i = 0; i < nRepeticoes ; i++ ){
         geraInputs(numerosInputSeq,sizeInput);
 
-        //copy(numerosInputSeq, numerosInputSeq+sizeInput, numerosInputPrl);
+        copy(numerosInputSeq, numerosInputSeq+sizeInput, numerosInputPrl);
 
         cout << "\nA preencher array com " << sizeInput << " elementos ...\n" << endl;
         
-        clearCache();
+        /*clearCache();
         startCounters();
 
         bucketSortSeq(numerosInputSeq, sizeInput);
 
         stopCounters(-1);
+        */
+        clearCache();
+        startCounters();
 
-        //printArray(numerosInputSeq,sizeInput);
-        
-        //bucketSortPrl
+        bucketSortPrl(numerosInputPrl,sizeInput);
+        stopCounters(-1);
+
+        testaOrdenado(numerosInputPrl,sizeInput);
+
+        //cout << "TEMPO = " <<  << "\n" << endl;
     }
     
+    cout << "\n- - - - - - - - - - - -" << endl;
     printResults(nThreads, sizeInput);
+    cout << "- - - - - - - - - - - -" << endl;
+    printResultsFunc();
+    cout << "- - - - - - - - - - - -\n" << endl;
 
+    //printArray(numerosInputPrl,sizeInput);
+
+    cout << "-----------------------------------------------\n" << endl;
     return 0;
 
 }

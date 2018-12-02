@@ -10,10 +10,7 @@ void geraInputs(int numerosInput[], int sizeInput){
 }
 
 void criarBuckets(int contadores[], int nBuckets){
-	/*for (int i = 0; i < sizeBuckets; i++){ //nao sei se é preciso inicializar este array
-		buckets[i]=0;
-	}*/
-	
+
 	for (int i = 0; i < nBuckets; i++){
 		contadores[i] = 0;
 	}
@@ -48,16 +45,6 @@ void ordenaInput(int buckets[],int contadores[], int numerosInput[], int sizeInp
 		}
 	}
 }
-
-void printArray(int array[], int sizeArray){
-	printf("[");
-	for (int i = 0; i < sizeArray; i++){
-		printf("%d, ", array[i]);
-	}
-	printf("]\n");
-
-}
-
 
 void bucketSortSeq(int numerosInput[], int sizeInput){
 

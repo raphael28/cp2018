@@ -24,7 +24,8 @@ main.o: src/main.cpp src/bucketSort.h /usr/include/stdio.h \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/x86_64-unknown-linux-gnu/bits/c++config.h \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/x86_64-unknown-linux-gnu/bits/os_defines.h \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
- src/measurements.h /share/apps/gcc/4.8.2/include/c++/4.8.2/iostream \
+ src/bucketSortPrl.h src/measurements.h \
+ /share/apps/gcc/4.8.2/include/c++/4.8.2/iostream \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/ostream \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/ios \
  /share/apps/gcc/4.8.2/include/c++/4.8.2/iosfwd \
