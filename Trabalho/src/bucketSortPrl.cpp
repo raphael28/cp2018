@@ -1,10 +1,12 @@
 #include "bucketSortPrl.h"
 #include "mergeSort.h"
 #include "measurements.h"
+#include <omp.h>
 
 using namespace std;
 
 void criarBucketsPrl(int contadores[], int nBuckets){
+    #pragma omp parallel for num_threads (2)
 	for (int i = 0; i < nBuckets; i++){
 		contadores[i] = 0;
 	}
@@ -21,7 +23,8 @@ void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int si
 } 
 
 void ordenaBucketsPrl(int buckets[], int contadores[], int sizeInput, int nBuckets){
-	for (int i = 0; i < nBuckets; i++){
+	#pragma omp parallel for num_threads (2) schedule (static,nBuckets/2) 
+    for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
                 //mergeSort(buckets,i*sizeInput,i*sizeInput+contadores[i]-1);
 				mergesort(&buckets[i*sizeInput],contadores[i]);
