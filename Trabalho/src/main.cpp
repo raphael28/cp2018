@@ -4,12 +4,7 @@
 
 using namespace std;
 
-int sizeInput, nBuckets, sizeBuckets , nThreads, nRepeticoes;
-double clearcache [30000000]; //cache
-void clearCache() {
-	for (unsigned i = 0; i < 30000000; ++i)
-		clearcache[i] = i;
-}
+int sizeInput, nBuckets, nThreads, nRepeticoes;
 
 void printArray(int array[], int sizeArray){
 	printf("[");
@@ -37,14 +32,16 @@ int testaOrdenado(int array[], int sizeArray){
 
 int main(int argc, char **argv) {
 
-    if(argc<4) {
-        printf("Run: ./bin/main nElementos nThreads nRepeticoesRun\n");
+    if(argc<5) {
+        printf("Run: ./bin/main nElementos nBuckets nThreads nRepeticoesRun\n");
         return 1;
     }
     
     sizeInput = atoi(argv[1]); //tamanho do array de Input
-    nThreads = atoi(argv[2]);
-    nRepeticoes = atoi(argv[3]);
+    nBuckets = atoi(argv[2]);
+    nThreads = atoi(argv[3]);
+    numThreads = nThreads;
+    nRepeticoes = atoi(argv[4]);
 
     int numerosInputSeq[sizeInput]; //array input, com numeros random, dados por um intervalo [0,sizeMax]
 	int numerosInputPrl[sizeInput];
@@ -58,20 +55,25 @@ int main(int argc, char **argv) {
 
         copy(numerosInputSeq, numerosInputSeq+sizeInput, numerosInputPrl);
 
-        cout << "\nA preencher array com " << sizeInput << " elementos ...\n" << endl;
+        cout << "\nA preencher array com " << sizeInput << " elementos...\n" << endl;
         
-        /*clearCache();
+        cout << "\nA iniciar versão sequencial...\n" << endl;
+
+        clearCache();
+
         startCounters();
 
-        bucketSortSeq(numerosInputSeq, sizeInput);
+        bucketSortSeq(numerosInputSeq, sizeInput,nBuckets);
 
         stopCounters(-1);
-        */
+        
+        cout << "\nA iniciar versão paralela...\n" << endl;
+        
         clearCache();
         startCounters();
 
-        bucketSortPrl(numerosInputPrl,sizeInput);
-        stopCounters(-1);
+        bucketSortPrl(numerosInputPrl,sizeInput,nBuckets);
+        stopCounters(nThreads);
 
         testaOrdenado(numerosInputPrl,sizeInput);
 
@@ -79,9 +81,9 @@ int main(int argc, char **argv) {
     }
     
     cout << "\n- - - - - - - - - - - -" << endl;
-    printResults(nThreads, sizeInput);
+    printResults(nThreads, sizeInput, nBuckets);
     cout << "- - - - - - - - - - - -" << endl;
-    printResultsFunc();
+    printResultsFunc(nThreads);
     cout << "- - - - - - - - - - - -\n" << endl;
 
     //printArray(numerosInputPrl,sizeInput);

@@ -4,29 +4,36 @@
 #include <omp.h>
 
 using namespace std;
+int numThreads;
 
 void criarBucketsPrl(int contadores[], int nBuckets){
-    #pragma omp parallel for num_threads (2)
 	for (int i = 0; i < nBuckets; i++){
 		contadores[i] = 0;
 	}
 }
 
-void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int sizeInput){
-	int numBucket;
-	for (int i = 0; i < sizeInput; i++){
-		numBucket=(int)sqrt(numerosInput[i]);
+void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int sizeInput,int nBuckets){
+	float numBucket;
+	int index;
+	float sizeInputFloat = (float) sizeInput; 
+	float indexFloat;
 
-		buckets[(numBucket*sizeInput)+contadores[numBucket]]=numerosInput[i];
-		contadores[numBucket]++;
+	for (int i = 0; i < sizeInput; i++){
+
+		numBucket = numerosInput[i]/sizeInputFloat;
+		indexFloat = numBucket*nBuckets;
+		index = (int) indexFloat;
+
+		buckets[(index*sizeInput)+contadores[index]]=numerosInput[i];
+		contadores[index]++;
 	}
 } 
 
 void ordenaBucketsPrl(int buckets[], int contadores[], int sizeInput, int nBuckets){
-	#pragma omp parallel for num_threads (2) schedule (static,nBuckets/2) 
+
+	#pragma omp parallel for num_threads (numThreads) schedule (dynamic,nBuckets/numThreads) 
     for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
-                //mergeSort(buckets,i*sizeInput,i*sizeInput+contadores[i]-1);
 				mergesort(&buckets[i*sizeInput],contadores[i]);
             }
 		}	
@@ -43,49 +50,31 @@ void ordenaInputPrl(int buckets[],int contadores[], int numerosInput[], int size
 	}
 }
 
-void bucketSortPrl(int numerosInput[], int sizeInput){
+void bucketSortPrl(int numerosInput[], int sizeInput, int nBuckets){
 
-	int nBuckets = (int)sqrt(sizeInput)+1; // numero de Buckets
     int sizeBuckets = sizeInput*nBuckets; //tamanho do array de buckets
 	int contadores[nBuckets]; //conta quantos elementos estão num dado bucket, atualmente.
     int buckets[sizeBuckets];
 
-    //long long unsigned t1I, t2I, t3I, t4I, t1F, t2F, t3F, t4F, ttotal=0;
-
-    
-    cout << "A criar buckets..." << endl;
+    cout << "A criar buckets... " << nBuckets << endl;
 	startCountersCriarB();
     criarBucketsPrl(contadores,nBuckets);
-    stopCountersCriarB();
+    stopCountersCriarB(numThreads);
 
     cout << "A inserir os elementos nos buckets..." << endl; 
     startCountersInsereB();
-    insereBucketsPrl(buckets,contadores,numerosInput,sizeInput);
-    stopCountersInsereB();
+    insereBucketsPrl(buckets,contadores,numerosInput,sizeInput,nBuckets);
+    stopCountersInsereB(numThreads);
 
     cout << "A ordenar os elementos nos buckets..." << endl;
     startCountersOrdenaB();
     ordenaBucketsPrl(buckets,contadores,sizeInput,nBuckets);
-    stopCountersOrdenaB();
+    stopCountersOrdenaB(numThreads);
 
     cout << "A ordenar o array inicial..." << endl;
     startCountersOrdenaArr();
     ordenaInputPrl(buckets,contadores,numerosInput,sizeInput, nBuckets);
-    stopCountersOrdenaArr();
-
-    //ttotal = (t1F - t1I)+(t2F - t2I)+(t3F - t3I)+(t4F - t4I);
-/*
-    cout << "\nTempo criar buckets = " << (t1F - t1I) << " --> (" 
-         << (t1F - t1I) << " / " << ttotal << ") = " << ((t1F - t1I)/ttotal) << endl;
-
-    cout << "\nTempo inserir elementos nos buckets = " << (t2F - t2I) << " --> (" 
-         << (t2F - t2I) << " / " << ttotal << ") = " << ((t2F - t2I)/ttotal) << endl;
-
-    cout << "\nTempo ordenar elementos nos buckets = " << (t3F - t3I) << " --> (" 
-         << (t3F - t3I) << " / " << ttotal << ") = " << ((t3F - t3I)/ttotal) << endl;
-
-    cout << "\nTempo ordenar array inicial = " << (t4F - t4I) << " --> (" 
-         << (t4F - t4I) << " / " << ttotal << ") = " << ((t4F - t4I)/ttotal) << endl;*/                  
+    stopCountersOrdenaArr(numThreads);                  
 }
 
 

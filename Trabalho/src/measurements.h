@@ -14,15 +14,16 @@
 void startCounters();
 long long unsigned stopCounters(int nThread);
 void startCountersCriarB();
-long long unsigned stopCountersCriarB();
+long long unsigned stopCountersCriarB(int nThread);
 void startCountersInsereB();
-long long unsigned stopCountersInsereB();
+long long unsigned stopCountersInsereB(int nThread);
 void startCountersOrdenaB();
-long long unsigned stopCountersOrdenaB();
+long long unsigned stopCountersOrdenaB(int nThread);
 void startCountersOrdenaArr();
-long long unsigned stopCountersOrdenaArr();
+long long unsigned stopCountersOrdenaArr(int nThread);
+void clearCache();
 
 std::tuple<long long unsigned, double,double,double> mediana(int thread);
-void printResults (int nThreads, int sizeInput);
-std::tuple<long long unsigned,long long unsigned,long long unsigned,long long unsigned> medianaFunc();
-void printResultsFunc();
+void printResults (int nThreads, int sizeInput, int nBuckets);
+std::tuple<long long unsigned,long long unsigned,long long unsigned,long long unsigned> medianaFunc(int nThreads);
+void printResultsFunc(int nThreads);
