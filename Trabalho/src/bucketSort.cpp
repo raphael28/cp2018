@@ -55,12 +55,13 @@ void ordenaInput(int buckets[],int contadores[], int numerosInput[], int sizeInp
 	}
 }
 
-void bucketSortSeq(int numerosInput[], int sizeInput, int nBuckets){
+void bucketSortSeq(int numerosInput[], int sizeInput){
 
+	int nBuckets = (int)sqrt(sizeInput) + 1;
     int sizeBuckets = sizeInput*nBuckets; //tamanho do array de buckets
 	int contadores[nBuckets]; //conta quantos elementos estão num dado bucket, atualmente.
     int buckets[sizeBuckets];
-	
+
 	cout << "A criar buckets... " << nBuckets << endl;
 	startCountersCriarB();
 	criarBuckets(contadores,nBuckets);
@@ -75,6 +76,7 @@ void bucketSortSeq(int numerosInput[], int sizeInput, int nBuckets){
 	startCountersOrdenaB();	
     ordenaBuckets(buckets,contadores,sizeInput,nBuckets);
 	stopCountersOrdenaB(-1);
+
 
 	cout << "A ordenar o array inicial..." << endl;
 	startCountersOrdenaArr();

@@ -1,0 +1,960 @@
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 522151, MISS_L2 = 85246, MISS_L3 = 3644, TOT_INS = 270222565)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503995, MISS_L2 = 81799, MISS_L3 = 1734, TOT_INS = 272232248)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 501943, MISS_L2 = 79699, MISS_L3 = 1878, TOT_INS = 270216303)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502867, MISS_L2 = 81817, MISS_L3 = 1495, TOT_INS = 272216757)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 500959, MISS_L2 = 80555, MISS_L3 = 1532, TOT_INS = 270329983)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503136, MISS_L2 = 81754, MISS_L3 = 1443, TOT_INS = 272335792)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502101, MISS_L2 = 82387, MISS_L3 = 1515, TOT_INS = 270327944)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502002, MISS_L2 = 80627, MISS_L3 = 1634, TOT_INS = 272333763)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502021, MISS_L2 = 81723, MISS_L3 = 1466, TOT_INS = 270513831)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503015, MISS_L2 = 82256, MISS_L3 = 1442, TOT_INS = 272515842)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 82895 usecs,
+	Miss rate (L1): 0.185738 %
+	Miss rate (L2): 0.0302103 %
+	Miss rate (L3): 0.000566715 %
+
+Versão paralela (Nº threads = 1):
+	Tempo: 82343 usecs,
+	Miss rate (L1): 0.18473 %
+
+Speed-up: 1.0067
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 82232 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11442 usecs,
+
+Ordenar os Buckets:
+	Tempo: 70349 usecs,
+
+Ordenar o array inicial:
+	Tempo: 440 usecs,
+
+--- PARALELO ---
+Tempo total = 82155 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11304 usecs,
+
+Ordenar os Buckets:
+	Tempo: 70421 usecs,
+
+Ordenar o array inicial:
+	Tempo: 429 usecs,
+
+SPEED-UP: 1.00094
+- - - - - - - - - - - -
+
+-----------------------------------------------
+
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 523919, MISS_L2 = 90438, MISS_L3 = 2812, TOT_INS = 270341236)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 453479, MISS_L2 = 57962, MISS_L3 = 13319, TOT_INS = 147890382)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 501820, MISS_L2 = 78537, MISS_L3 = 1817, TOT_INS = 270253043)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 450973, MISS_L2 = 56621, MISS_L3 = 13071, TOT_INS = 147684873)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503556, MISS_L2 = 81430, MISS_L3 = 1265, TOT_INS = 270248017)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 451136, MISS_L2 = 57222, MISS_L3 = 13022, TOT_INS = 147685268)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503664, MISS_L2 = 81714, MISS_L3 = 1406, TOT_INS = 270246091)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 456866, MISS_L2 = 58711, MISS_L3 = 11038, TOT_INS = 147683227)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 504413, MISS_L2 = 85940, MISS_L3 = 1279, TOT_INS = 270118710)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 457553, MISS_L2 = 58880, MISS_L3 = 11418, TOT_INS = 147554076)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 83209 usecs,
+	Miss rate (L1): 0.186372 %
+	Miss rate (L2): 0.0302369 %
+	Miss rate (L3): 0.000520267 %
+
+Versão paralela (Nº threads = 2):
+	Tempo: 54162 usecs,
+	Miss rate (L1): 0.306632 %
+
+Speed-up: 1.5363
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 82728 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11307 usecs,
+
+Ordenar os Buckets:
+	Tempo: 70973 usecs,
+
+Ordenar o array inicial:
+	Tempo: 447 usecs,
+
+--- PARALELO ---
+Tempo total = 53952 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11187 usecs,
+
+Ordenar os Buckets:
+	Tempo: 42108 usecs,
+
+Ordenar o array inicial:
+	Tempo: 656 usecs,
+
+SPEED-UP: 1.53336
+- - - - - - - - - - - -
+
+-----------------------------------------------
+
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 524269, MISS_L2 = 84372, MISS_L3 = 3651, TOT_INS = 270125809)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 436136, MISS_L2 = 54114, MISS_L3 = 13472, TOT_INS = 84647118)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503872, MISS_L2 = 81669, MISS_L3 = 1701, TOT_INS = 270123752)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 434438, MISS_L2 = 53439, MISS_L3 = 12928, TOT_INS = 84229283)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503268, MISS_L2 = 80619, MISS_L3 = 1540, TOT_INS = 270181660)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 435586, MISS_L2 = 53538, MISS_L3 = 12726, TOT_INS = 84295124)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503189, MISS_L2 = 81003, MISS_L3 = 1535, TOT_INS = 270179731)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 435224, MISS_L2 = 53406, MISS_L3 = 12996, TOT_INS = 84293085)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503521, MISS_L2 = 83255, MISS_L3 = 1534, TOT_INS = 270181670)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 435441, MISS_L2 = 53950, MISS_L3 = 12987, TOT_INS = 84295380)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 81082 usecs,
+	Miss rate (L1): 0.186364 %
+	Miss rate (L2): 0.0302339 %
+	Miss rate (L3): 0.000569987 %
+
+Versão paralela (Nº threads = 4):
+	Tempo: 32863 usecs,
+	Miss rate (L1): 0.516322 %
+
+Speed-up: 2.46727
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 80887 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11148 usecs,
+
+Ordenar os Buckets:
+	Tempo: 69296 usecs,
+
+Ordenar o array inicial:
+	Tempo: 442 usecs,
+
+--- PARALELO ---
+Tempo total = 32651 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11132 usecs,
+
+Ordenar os Buckets:
+	Tempo: 20852 usecs,
+
+Ordenar o array inicial:
+	Tempo: 666 usecs,
+
+SPEED-UP: 2.47732
+- - - - - - - - - - - -
+
+-----------------------------------------------
+
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 520775, MISS_L2 = 81346, MISS_L3 = 4066, TOT_INS = 270188743)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 434977, MISS_L2 = 50951, MISS_L3 = 12094, TOT_INS = 52823355)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 501679, MISS_L2 = 82419, MISS_L3 = 1521, TOT_INS = 270244301)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 437382, MISS_L2 = 55358, MISS_L3 = 13739, TOT_INS = 52412565)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502150, MISS_L2 = 82383, MISS_L3 = 1201, TOT_INS = 270239272)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 437794, MISS_L2 = 52452, MISS_L3 = 11264, TOT_INS = 52679120)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502072, MISS_L2 = 82903, MISS_L3 = 1213, TOT_INS = 270237346)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 429660, MISS_L2 = 48478, MISS_L3 = 13468, TOT_INS = 52677380)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 501506, MISS_L2 = 82527, MISS_L3 = 1215, TOT_INS = 270239347)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 427684, MISS_L2 = 48192, MISS_L3 = 12261, TOT_INS = 51188338)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 82672 usecs,
+	Miss rate (L1): 0.185789 %
+	Miss rate (L2): 0.030498 %
+	Miss rate (L3): 0.000449601 %
+
+Versão paralela (Nº threads = 8):
+	Tempo: 24374 usecs,
+	Miss rate (L1): 0.831058 %
+
+Speed-up: 3.39181
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 82361 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11223 usecs,
+
+Ordenar os Buckets:
+	Tempo: 70702 usecs,
+
+Ordenar o array inicial:
+	Tempo: 435 usecs,
+
+--- PARALELO ---
+Tempo total = 24253 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11305 usecs,
+
+Ordenar os Buckets:
+	Tempo: 12233 usecs,
+
+Ordenar o array inicial:
+	Tempo: 714 usecs,
+
+SPEED-UP: 3.39591
+- - - - - - - - - - - -
+
+-----------------------------------------------
+
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 523243, MISS_L2 = 86452, MISS_L3 = 2960, TOT_INS = 270274107)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 437595, MISS_L2 = 37845, MISS_L3 = 4236, TOT_INS = 38686935)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503307, MISS_L2 = 79351, MISS_L3 = 1723, TOT_INS = 270272051)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 433583, MISS_L2 = 36646, MISS_L3 = 2921, TOT_INS = 36356801)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 504439, MISS_L2 = 81736, MISS_L3 = 1542, TOT_INS = 270267094)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 434866, MISS_L2 = 39234, MISS_L3 = 2976, TOT_INS = 36357021)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502189, MISS_L2 = 79491, MISS_L3 = 1621, TOT_INS = 270283424)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 433239, MISS_L2 = 36470, MISS_L3 = 2793, TOT_INS = 36256620)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502227, MISS_L2 = 78823, MISS_L3 = 1754, TOT_INS = 270285350)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 433346, MISS_L2 = 35829, MISS_L3 = 2900, TOT_INS = 36390143)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 80926 usecs,
+	Miss rate (L1): 0.186222 %
+	Miss rate (L2): 0.0294102 %
+	Miss rate (L3): 0.000637506 %
+
+Versão paralela (Nº threads = 16):
+	Tempo: 22897 usecs,
+	Miss rate (L1): 1.19258 %
+
+Speed-up: 3.53435
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 80740 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 10913 usecs,
+
+Ordenar os Buckets:
+	Tempo: 69385 usecs,
+
+Ordenar o array inicial:
+	Tempo: 441 usecs,
+
+--- PARALELO ---
+Tempo total = 22334 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 10843 usecs,
+
+Ordenar os Buckets:
+	Tempo: 10604 usecs,
+
+Ordenar o array inicial:
+	Tempo: 886 usecs,
+
+SPEED-UP: 3.61512
+- - - - - - - - - - - -
+
+-----------------------------------------------
+
+
+-----------------------------------------------
+
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 523014, MISS_L2 = 83163, MISS_L3 = 3839, TOT_INS = 270292430)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 428709, MISS_L2 = 52301, MISS_L3 = 14943, TOT_INS = 37229952)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 503067, MISS_L2 = 82312, MISS_L3 = 1546, TOT_INS = 270286511)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 435846, MISS_L2 = 34971, MISS_L3 = 3050, TOT_INS = 35312860)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502238, MISS_L2 = 82518, MISS_L3 = 1375, TOT_INS = 270281559)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 434268, MISS_L2 = 47097, MISS_L3 = 3041, TOT_INS = 31051368)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 505965, MISS_L2 = 78536, MISS_L3 = 1735, TOT_INS = 270343414)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 435375, MISS_L2 = 35241, MISS_L3 = 3018, TOT_INS = 35299046)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+A preencher array com 1000000 elementos...
+
+
+A iniciar versão sequencial...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 502466, MISS_L2 = 81675, MISS_L3 = 1406, TOT_INS = 270399295)
+
+
+A iniciar versão paralela...
+
+A criar buckets... 1001
+A inserir os elementos nos buckets...
+A ordenar os elementos nos buckets...
+A ordenar o array inicial...
+(MISS_L1 = 434589, MISS_L2 = 34435, MISS_L3 = 3168, TOT_INS = 35300715)
+
+ARRAY ORDENADO!ARRAY ORDENADO!
+- - - - - - - - - - - -
+
+----- Nº elementos = 1000000, Nº buckets = 1001 -----
+Versão sequencial:
+	Tempo: 81088 usecs,
+	Miss rate (L1): 0.186124 %
+	Miss rate (L2): 0.0304536 %
+	Miss rate (L3): 0.000571986 %
+
+Versão paralela (Nº threads = 24):
+	Tempo: 21119 usecs,
+	Miss rate (L1): 1.23339 %
+
+Speed-up: 3.83958
+--------------------------------------------------
+
+- - - - - - - - - - - -
+--- SEQUENCIAL ---
+Tempo total = 80868 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11126 usecs,
+
+Ordenar os Buckets:
+	Tempo: 69309 usecs,
+
+Ordenar o array inicial:
+	Tempo: 432 usecs,
+
+--- PARALELO ---
+Tempo total = 20913 usecs
+
+Criar Buckets:
+	Tempo: 1 usecs,
+
+Inserir nos Buckets:
+	Tempo: 11062 usecs,
+
+Ordenar os Buckets:
+	Tempo: 9055 usecs,
+
+Ordenar o array inicial:
+	Tempo: 795 usecs,
+
+SPEED-UP: 3.86688
+- - - - - - - - - - - -
+
+-----------------------------------------------
+

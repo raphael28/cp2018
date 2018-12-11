@@ -34,7 +34,7 @@ vector<long long unsigned> tempos_paralelo_OrdenaArr;
 
 double clearcache [30000000]; //cache
 
-long long values[NUM_EVENTS]; // para depois calcular as miss rates == values[0](LOAD_MISSES) / values[1](TOT_INS)
+long long values[NUM_EVENTS]; // para depois calcular as miss rates == values[0](LOAD_MISSES) / values[3](TOT_INS)
 
 int events[] = { //tipo de eventos que estou a guardar
 	PAPI_L1_LDM, //Level 1 load misses
@@ -150,10 +150,10 @@ long long unsigned stopCounters(int nThread){
 		miss_rates_paralelo.push_back((double)((double)values[0]/(double)(values[3]))*100);
     }
     
-	cout << "(Values[0] = " << values[0]
-	     << ", Values[1] = " << values[1]
-	     << ", Values[2] = " << values[2]
-	     << ", Values[3] = " << values[3] << ")\n" << endl;
+	cout << "(MISS_L1 = " << values[0]
+	     << ", MISS_L2 = " << values[1]
+	     << ", MISS_L3 = " << values[2]
+	     << ", TOT_INS = " << values[3] << ")\n" << endl;
     
 	return tempoFinal - tempoInicial;
 }
@@ -309,5 +309,7 @@ void printResultsFunc(int nThreads){
          << "\tTempo: " << std::get<2>(funcoesP) << " usecs,\n" << endl;
 
     cout << "Ordenar o array inicial:\n" 
-         << "\tTempo: " << std::get<3>(funcoesP) << " usecs,\n" << endl;     
+         << "\tTempo: " << std::get<3>(funcoesP) << " usecs,\n" << endl;
+
+    cout << "SPEED-UP: " << (double)((double)(tTot)/(double)(tTotP)) << endl;    
 }

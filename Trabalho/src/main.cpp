@@ -32,22 +32,20 @@ int testaOrdenado(int array[], int sizeArray){
 
 int main(int argc, char **argv) {
 
-    if(argc<5) {
-        printf("Run: ./bin/main nElementos nBuckets nThreads nRepeticoesRun\n");
+    if(argc<4) {
+        printf("Run: ./bin/main nElementos nThreads nRepeticoesRun\n");
         return 1;
     }
     
     sizeInput = atoi(argv[1]); //tamanho do array de Input
-    nBuckets = atoi(argv[2]);
-    nThreads = atoi(argv[3]);
-    numThreads = nThreads;
-    nRepeticoes = atoi(argv[4]);
+    //nBuckets = atoi(argv[2]);
+    nThreads = atoi(argv[2]);
+    numThreads = nThreads; //variavel global do bucketSortPrl
+    nRepeticoes = atoi(argv[3]);
 
     int numerosInputSeq[sizeInput]; //array input, com numeros random, dados por um intervalo [0,sizeMax]
 	int numerosInputPrl[sizeInput];
 
-    //long long unsigned tf=0;
-	
     cout << "\n-----------------------------------------------" << endl;
 
     for( int i = 0; i < nRepeticoes ; i++ ){
@@ -63,7 +61,7 @@ int main(int argc, char **argv) {
 
         startCounters();
 
-        bucketSortSeq(numerosInputSeq, sizeInput,nBuckets);
+        bucketSortSeq(numerosInputSeq, sizeInput);
 
         stopCounters(-1);
         
@@ -72,13 +70,14 @@ int main(int argc, char **argv) {
         clearCache();
         startCounters();
 
-        bucketSortPrl(numerosInputPrl,sizeInput,nBuckets);
+        bucketSortPrl(numerosInputPrl,sizeInput);
         stopCounters(nThreads);
 
+        testaOrdenado(numerosInputSeq,sizeInput);
         testaOrdenado(numerosInputPrl,sizeInput);
-
-        //cout << "TEMPO = " <<  << "\n" << endl;
     }
+
+    nBuckets = (int)sqrt(sizeInput) + 1; 
     
     cout << "\n- - - - - - - - - - - -" << endl;
     printResults(nThreads, sizeInput, nBuckets);

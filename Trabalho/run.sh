@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #PBS -l nodes=1:ppn=24:r431
-#PBS -l walltime=10:00
-#PBS -N a79821job
+#PBS -l walltime=00:02:00
+#PBS -N a78848job
 
-cd /home/a79821/Trabalho/
+cd /home/a78848/Trabalho/
 
 lscpu > specs.txt
 
-rm -f a79821job*
+rm -f a78848job*
 
 make clean > results/erros.txt
 
@@ -27,15 +27,12 @@ make > results/erros.txt
 
 echo "Compilation Successful..."
 
-for size in 100 1000 10000 1000000
+for size in 1000000
 do	
-	for nB in 16 32 64 128
+	for nThreads in 1 2 4 8 16 24
 	do
-		for nThreads in 1 2 4
-		do
-		export OMP_NUM_THREADS=$nThreads
-		./bin/main $size $nB $nThreads 5 >> results/measurements.txt
-		done
+		export OMP_NUM_THREADS=$nThreads	
+		./bin/main $size $nThreads 5 >> results/measurements_1000000.txt
 	done
 done
 

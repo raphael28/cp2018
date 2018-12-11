@@ -30,13 +30,14 @@ void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int si
 } 
 
 void ordenaBucketsPrl(int buckets[], int contadores[], int sizeInput, int nBuckets){
-
+	//if (numThreads < nBuckets) numThreads = nBuckets-2;
+		
 	#pragma omp parallel for num_threads (numThreads) schedule (dynamic,nBuckets/numThreads) 
-    for (int i = 0; i < nBuckets; i++){
+	for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
 				mergesort(&buckets[i*sizeInput],contadores[i]);
-            }
-		}	
+			}
+	}	
 }
 
 void ordenaInputPrl(int buckets[],int contadores[], int numerosInput[], int sizeInput, int nBuckets){
@@ -50,8 +51,9 @@ void ordenaInputPrl(int buckets[],int contadores[], int numerosInput[], int size
 	}
 }
 
-void bucketSortPrl(int numerosInput[], int sizeInput, int nBuckets){
+void bucketSortPrl(int numerosInput[], int sizeInput){
 
+	int nBuckets = (int)sqrt(sizeInput) + 1;
     int sizeBuckets = sizeInput*nBuckets; //tamanho do array de buckets
 	int contadores[nBuckets]; //conta quantos elementos estão num dado bucket, atualmente.
     int buckets[sizeBuckets];
