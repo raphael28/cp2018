@@ -22,11 +22,11 @@ void criarBuckets(int contadores[], int nBuckets){
 void insereBuckets(int buckets[], int contadores[], int numerosInput[],int sizeInput, int nBuckets){
 	float numBucket;
 	int index;
-	float sizeInputFloat = (float) sizeInput; 
+	float sizeInputFloat = (float)(1/(float)sizeInput); 
 	float indexFloat;
 	for (int i = 0; i < sizeInput; i++){
 
-		numBucket = numerosInput[i]/sizeInputFloat;
+		numBucket = ((float)numerosInput[i]) * sizeInputFloat;
 		indexFloat = numBucket*nBuckets;
 		index = (int) indexFloat;
 

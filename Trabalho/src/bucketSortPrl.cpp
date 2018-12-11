@@ -15,12 +15,11 @@ void criarBucketsPrl(int contadores[], int nBuckets){
 void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int sizeInput,int nBuckets){
 	float numBucket;
 	int index;
-	float sizeInputFloat = (float) sizeInput; 
+	float sizeInputFloat = (float)(1/(float)sizeInput); 
 	float indexFloat;
-
+	
 	for (int i = 0; i < sizeInput; i++){
-
-		numBucket = numerosInput[i]/sizeInputFloat;
+		numBucket = ((float)numerosInput[i]) * sizeInputFloat;
 		indexFloat = numBucket*nBuckets;
 		index = (int) indexFloat;
 
@@ -30,9 +29,8 @@ void insereBucketsPrl(int buckets[], int contadores[], int numerosInput[],int si
 } 
 
 void ordenaBucketsPrl(int buckets[], int contadores[], int sizeInput, int nBuckets){
-	//if (numThreads < nBuckets) numThreads = nBuckets-2;
 		
-	#pragma omp parallel for num_threads (numThreads) schedule (dynamic,nBuckets/numThreads) 
+	#pragma omp parallel for schedule (static,nBuckets/numThreads) 
 	for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
 				mergesort(&buckets[i*sizeInput],contadores[i]);

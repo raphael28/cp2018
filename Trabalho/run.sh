@@ -2,13 +2,13 @@
 
 #PBS -l nodes=1:ppn=24:r431
 #PBS -l walltime=00:02:00
-#PBS -N a78848job
+#PBS -N a79821job
 
-cd /home/a78848/Trabalho/
+cd /home/a79821/Trabalho/
 
 lscpu > specs.txt
 
-rm -f a78848job*
+rm -f a79821job*
 
 make clean > results/erros.txt
 
@@ -32,7 +32,7 @@ do
 	for nThreads in 1 2 4 8 16 24
 	do
 		export OMP_NUM_THREADS=$nThreads	
-		./bin/main $size $nThreads 5 >> results/measurements_1000000.txt
+		./bin/main $size $nThreads 5 >> results/measurements_1000000_insere_2.txt
 	done
 done
 
