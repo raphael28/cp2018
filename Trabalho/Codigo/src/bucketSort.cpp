@@ -5,7 +5,7 @@
 using namespace std;
 
 void geraInputs(int numerosInput[], int sizeInput){
-    srand (time(NULL)); //Vai gerar sempre numeros diferentes, cada vez que faço run!
+    srand (time(NULL));
 
 	for (int i=0;i<sizeInput;i++){
 		numerosInput[i]= rand() % sizeInput;
@@ -38,7 +38,6 @@ void insereBuckets(int buckets[], int contadores[], int numerosInput[],int sizeI
 void ordenaBuckets(int buckets[], int contadores[], int sizeInput, int nBuckets){
 	for (int i = 0; i < nBuckets; i++){
 			if(contadores[i]>0){
-                //mergeSort(buckets,i*sizeInput,i*sizeInput+contadores[i]-1);
 				mergesort(&buckets[i*sizeInput],contadores[i]);
             }
 		}	

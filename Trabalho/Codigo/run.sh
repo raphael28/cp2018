@@ -32,7 +32,7 @@ do
 	for nThreads in 1 2 4 8 16 24
 	do
 		export OMP_NUM_THREADS=$nThreads	
-		./bin/main $size $nThreads 5 >> results/measurements_1000000_insere_2.txt
+		./bin/main $size $nThreads 5 >> results/measurements.txt
 	done
 done
 

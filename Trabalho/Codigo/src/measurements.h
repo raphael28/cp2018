@@ -10,7 +10,6 @@
 #include <algorithm>
 #include "papi.h"
 
-//void clearCache();
 void startCounters();
 long long unsigned stopCounters(int nThread);
 void startCountersCriarB();

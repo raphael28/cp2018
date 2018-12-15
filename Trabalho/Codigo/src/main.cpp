@@ -38,7 +38,6 @@ int main(int argc, char **argv) {
     }
     
     sizeInput = atoi(argv[1]); //tamanho do array de Input
-    //nBuckets = atoi(argv[2]);
     nThreads = atoi(argv[2]);
     numThreads = nThreads; //variavel global do bucketSortPrl
     nRepeticoes = atoi(argv[3]);
@@ -84,8 +83,6 @@ int main(int argc, char **argv) {
     cout << "- - - - - - - - - - - -" << endl;
     printResultsFunc(nThreads);
     cout << "- - - - - - - - - - - -\n" << endl;
-
-    //printArray(numerosInputPrl,sizeInput);
 
     cout << "-----------------------------------------------\n" << endl;
     return 0;
